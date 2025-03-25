@@ -6,19 +6,14 @@ def get_num_words(text):
 
 def get_char_count(text):
 
-    list_of_chars = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
-                     "q","r","s","t","u","v","w","y","z"]
     char_count = {}
     lowered_text = text.lower()
-    #print(lowered_text)
-    #amount_t = lowered_text.count("t")
-    #print(amount_t)
-    
-    for char in list_of_chars:
-        #print(char)
-        #print(lowered_text.count(char))
-        char_count[char] = lowered_text.count(char)
-        #print(char_count)
+        
+    for char in lowered_text:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
 
     #print(char_count)
     return char_count
