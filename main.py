@@ -1,5 +1,3 @@
-from pathlib import Path
-
 def get_book_text(path_to_file):
     
     file_contents = ""
@@ -18,7 +16,7 @@ def main():
 
     text = ""
     count = 0
-    path = Path("books/frankenstein.txt")
+    path = ("./books/frankenstein.txt")
     #print(get_book_text(path))
     text = get_book_text(path)
     count = word_count(text)
